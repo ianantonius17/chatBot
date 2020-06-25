@@ -1,0 +1,21 @@
+service: botworthywebhook
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: us-west-2
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+          - ssm:GetParameters
+      Resource: "arn:aws:ssm:us-west-2:530381770536:parameter/*" 
+functions:
+  botworthyWebhook:
+    handler: handler.botworthyWebhook
+    events:
+      - http:
+          path: botworthywebhook
+          method: post
+plugins:
+  - serverless-offline
+

@@ -1,0 +1,20 @@
+{
+  "name": "botworthywebhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^5.11.0"
+  },
+  "dependencies": {
+    "aws-param-store": "^3.0.0",
+    "aws-sdk": "^2.523.0",
+    "google-spreadsheet": "^2.0.8",
+    "randomatic": "^3.1.1"
+  }
+}
